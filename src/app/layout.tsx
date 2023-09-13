@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import './globals.css'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header className=' flex h-16 bg-yellow-300'>
-          <form action="/items" className='m-auto flex max-w-screen-lg flex-1 px-4'>
+          <form action="/items" className='m-auto flex max-w-screen-lg flex-1 px-4 items-center'>
+            <Link href='/' className='text-yellow-900 m-2'>Agustin Nazer</Link>
             <input className='h-8 flex-1 text-gray-600 px-2' type="text" name='search' />
             <button className='bg-gray-200 px-2 py-1 text-slate-700' type='submit'>Search</button>
           </form>
